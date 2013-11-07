@@ -1,58 +1,37 @@
 package org.openstreetmap.josm.plugins.sascache;
 
-import javax.swing.Action;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
+import static org.openstreetmap.josm.tools.I18n.tr;
 
-import java.awt.Toolkit;
-import java.awt.Graphics2D;
+import org.openstreetmap.josm.data.imagery.ImageryInfo;
+import org.openstreetmap.josm.data.imagery.ImageryInfo.ImageryBounds;
+import org.openstreetmap.josm.data.imagery.ImageryInfo.ImageryType;
+import org.openstreetmap.josm.gui.layer.TMSLayer;
 
-import org.openstreetmap.josm.Main; 
-import org.openstreetmap.josm.gui.layer.Layer;
-import org.openstreetmap.josm.gui.MapView;
-import org.openstreetmap.josm.data.Bounds;
-import org.openstreetmap.josm.data.osm.visitor.BoundingXYVisitor;
-import org.openstreetmap.josm.actions.RenameLayerAction;
-
-
-
-public class SasCacheLayer extends Layer { 
-    
-    private Icon layerIcon = null; 
+public class SasCacheLayer extends TMSLayer 
+{
     
     public SasCacheLayer()
     {
-        super("SasCache");
+       super(buildImageryInfo());
+       
+       super.tileLoader = new SasCacheTileLoader(this);
+    }
+    
+    private static ImageryInfo buildImageryInfo()
+    {
+        ImageryInfo info = new ImageryInfo(tr("SasCache"));
         
-         layerIcon = new ImageIcon(Toolkit.getDefaultToolkit().createImage(getClass().getResource("/images/sasplanet16.png")));
+        ImageryBounds bounds = new ImageryBounds("-80,-180,80,180", ",");
+        
+        info.setBounds(bounds);
+        info.setDefaultMaxZoom(16);
+        info.setDefaultMinZoom(4);
+        info.setImageryType(ImageryType.TMS);
+        // Hack around the TMSLayer's URL check
+        info.setUrl("tms:http://example.com");
+        
+        
+        return info;
     }
-    
-    public Object getInfoComponent() { return null; } 
-    
-    public Action[] getMenuEntries() {
-        // Main menu
-        return new Action[] {                
-                new RenameLayerAction(null,this),
-        };
-    }
-    
-    public void visitBoundingBox(BoundingXYVisitor arg0) {
-            return;
-    }
- 
-    public boolean isMergable(Layer arg0) {
-        return false;
-    } 
-    
-    public void mergeFrom(Layer arg0) {}
-    
-    public String getToolTipText() {
-        return "SasCache";
-    }
-    
-    public Icon getIcon() { return layerIcon; } 
-    
-    public void paint(Graphics2D g2, MapView mv, Bounds bounds) { 
-        System.out.println("blah");
-    }
+
 }
