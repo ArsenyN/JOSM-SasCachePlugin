@@ -21,11 +21,11 @@ public class SasCacheLayer extends TMSLayer
     {
         ImageryInfo info = new ImageryInfo(tr("SasCache"));
         
-        ImageryBounds bounds = new ImageryBounds("-80,-180,80,180", ",");
+        ImageryBounds bounds = new ImageryBounds("-90,-180,90,180", ",");
         
         info.setBounds(bounds);
-        info.setDefaultMaxZoom(16);
-        info.setDefaultMinZoom(4);
+        info.setDefaultMaxZoom(19);
+        info.setDefaultMinZoom(10);
         info.setImageryType(ImageryType.TMS);
         // Hack around the TMSLayer's URL check
         info.setUrl("tms:http://example.com");

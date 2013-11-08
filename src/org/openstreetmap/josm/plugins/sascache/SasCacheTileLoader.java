@@ -18,8 +18,26 @@ public class SasCacheTileLoader extends OsmTileLoader {
 
             public void run() {       
                 tile.initLoading();
+
+                String basePath = "c://Downloads//SAS.Planet.Release.121010//cache_gmt//vesat//";
+
+                int z = tile.getZoom();
+                int x = tile.getXtile();
+                int y = tile.getYtile();
+                int xdiv = x / 1024;
+                int ydiv = y / 1024;
+
+                // String fileName = "z" + z + "//" + xdiv + "//x" + x + "//" + ydiv + "//y" + y + ".png";
+
+                String fileName = "z" + z + "//" + y + "//" + x + ".jpg";
+
+                String filePath = basePath + fileName;
+
+                System.out.println(filePath);
+
                 
-                byte fileContent[] = readFileToByteArray("c://Downloads//SAS.Planet.Release.121010//cache//yasat//z14//4//x4772//2//y2333.jpg");
+                //byte fileContent[] = readFileToByteArray("c://Downloads//SAS.Planet.Release.121010//cache//yasat//z14//4//x4772//2//y2333.jpg");
+                byte fileContent[] = readFileToByteArray(filePath);
                 if ((int)fileContent.length > 0)
                 {
                     try
