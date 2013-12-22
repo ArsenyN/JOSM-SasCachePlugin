@@ -11,12 +11,21 @@ import org.openstreetmap.josm.plugins.PluginInformation;
 
 
 public class SasCachePlugin extends Plugin{
-           
-        JosmAction sasCacheAddLayerAction = new SasCacheAddLayerAction(); 
-        
+		
+	JosmAction sasCacheAddLayerAction = new SasCacheAddLayerAction(); 
+		
 	public SasCachePlugin(PluginInformation info) {
-            super(info);		           
-            
-            MainMenu.add(Main.main.menu.imagerySubMenu, sasCacheAddLayerAction);
+			super(info);		           
+			
+			MainMenu.add(Main.main.menu.imagerySubMenu, sasCacheAddLayerAction);
+
+			//Main.pref.put("sascache.path", "c://");
+			//String path = Main.pref.get("sascache.path");
+			//System.out.println(path);
 	}	
+
+	public static String getSasCachePath()
+    {
+    	return Main.pref.get("sascache.path");
+    }
 }
