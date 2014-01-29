@@ -8,77 +8,82 @@ import org.openstreetmap.gui.jmapviewer.interfaces.TileLoaderListener;
 import java.io.*;
 
 public class SasCacheTileLoader extends OsmTileLoader {
-    
-    public SasCacheTileLoader(TileLoaderListener listener) {
-        super(listener);
-    }
-    
-    public TileJob createTileLoaderJob(final Tile tile) {
-        return new TileJob() {
+	
+	private SasCacheLayer layer;
+	public SasCacheTileLoader(TileLoaderListener listener) {
+		super(listener);
 
-            public void run() {       
-                tile.initLoading();
+		this.layer = (SasCacheLayer)listener;
+	}
+	
+	public TileJob createTileLoaderJob(final Tile tile) {
+		final String folder = this.layer.layerFolder;
 
-                //String basePath = "c://Downloads//SAS.Planet.Release.121010//cache_gmt//vesat//";
-                //String basePath = "c://Downloads//SAS.Planet.Release.131111//cache//sat//";
-                String basePath = SasCachePlugin.getSasCachePath() + "//sat//";
+		return new TileJob() {
 
-                int z = tile.getZoom();
-                int x = tile.getXtile();
-                int y = tile.getYtile();
-                int xdiv = x / 1024;
-                int ydiv = y / 1024;
+			public void run() {       
+				tile.initLoading();
 
-                String fileName = "z" + (z + 1) + "//" + xdiv + "//x" + x + "//" + ydiv + "//y" + y + ".jpg";
-                
-                String filePath = basePath + fileName;
+				//System.out.println(folder);
 
-                //byte fileContent[] = readFileToByteArray("c://Downloads//SAS.Planet.Release.121010//cache//yasat//z14//4//x4772//2//y2333.jpg");
-                byte fileContent[] = readFileToByteArray(filePath);
-                if ((int)fileContent.length > 0)
-                {
-                    try
-                    {
-                        tile.loadImage(new ByteArrayInputStream(fileContent));
-                    }
-                    catch(IOException  e)
-                    {
-                        System.out.println("Exception while reading the file " + e);
-                    }
-                    
-                    tile.finishLoading();
-                    listener.tileLoadingFinished(tile, true);
-                }
-                else
-                {
-                    tile.finishLoading();
-                    listener.tileLoadingFinished(tile, false);
-                }
-                
-            }
-            
-            public Tile getTile() {
-                return tile;
-            }
-        };
-    }
-    
-    private static byte[] readFileToByteArray(String filePath) {
-        File file = new File(filePath);
-        
-        byte fileContent[] = new byte[0];
-        
-        try
-        {
-            FileInputStream fin = new FileInputStream(file);
-            fileContent = new byte[(int)file.length()];
-            fin.read(fileContent);
-        }
-        catch(IOException  e)
-        {
-            System.out.println("Exception while reading the file " + e);
-        }
-        
-        return fileContent;
-    }
+				String basePath = SasCachePlugin.getSasCachePath() + "//" + folder + "//";
+
+				int z = tile.getZoom();
+				int x = tile.getXtile();
+				int y = tile.getYtile();
+				int xdiv = x / 1024;
+				int ydiv = y / 1024;
+
+				String fileName = "z" + (z + 1) + "//" + xdiv + "//x" + x + "//" + ydiv + "//y" + y + ".jpg";
+				
+				String filePath = basePath + fileName;
+
+				//byte fileContent[] = readFileToByteArray("c://Downloads//SAS.Planet.Release.121010//cache//yasat//z14//4//x4772//2//y2333.jpg");
+				byte fileContent[] = readFileToByteArray(filePath);
+				if ((int)fileContent.length > 0)
+				{
+					try
+					{
+						tile.loadImage(new ByteArrayInputStream(fileContent));
+					}
+					catch(IOException  e)
+					{
+						System.out.println("Exception while reading the file " + e);
+					}
+					
+					tile.finishLoading();
+					listener.tileLoadingFinished(tile, true);
+				}
+				else
+				{
+					tile.finishLoading();
+					listener.tileLoadingFinished(tile, false);
+				}
+				
+			}
+			
+			public Tile getTile() {
+				return tile;
+			}
+		};
+	}
+	
+	private static byte[] readFileToByteArray(String filePath) {
+		File file = new File(filePath);
+		
+		byte fileContent[] = new byte[0];
+		
+		try
+		{
+			FileInputStream fin = new FileInputStream(file);
+			fileContent = new byte[(int)file.length()];
+			fin.read(fileContent);
+		}
+		catch(IOException  e)
+		{
+			System.out.println("Exception while reading the file " + e);
+		}
+		
+		return fileContent;
+	}
 }

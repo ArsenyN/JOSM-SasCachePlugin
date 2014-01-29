@@ -19,9 +19,7 @@ public class SasCachePlugin extends Plugin{
 			
 			MainMenu.add(Main.main.menu.imagerySubMenu, sasCacheAddLayerAction);
 
-			//Main.pref.put("sascache.path", "c://");
-			//String path = Main.pref.get("sascache.path");
-			//System.out.println(path);
+			//System.out.println("1");
 	}	
 
 	public static String getSasCachePath()

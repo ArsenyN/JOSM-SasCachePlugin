@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 
 import java.io.File;
 
+import javax.swing.Action;
+
 import org.openstreetmap.josm.Main;
 import org.openstreetmap.josm.actions.JosmAction; 
 import org.openstreetmap.josm.gui.layer.Layer;
@@ -32,7 +34,15 @@ public class SasCacheAddLayerAction extends JosmAction
 		if (new File(cPath).exists()) 
 		{
 			Layer layer = new SasCacheLayer();        
-			Main.main.addLayer( layer );    	
+			Main.main.addLayer(layer);    
+
+			/*Action[] actions = layer.getMenuEntries();
+
+			for(Action a : actions) 
+			{
+			    String item = a.toString();
+				System.out.println(item);
+			}*/
 		}
 	}
 
