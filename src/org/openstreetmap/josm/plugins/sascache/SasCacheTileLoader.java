@@ -24,23 +24,13 @@ public class SasCacheTileLoader extends OsmTileLoader {
 			public void run() {       
 				tile.initLoading();
 
-				System.out.println("_" + folder + "_");
-				System.out.println(folder.equals("yasat"));
+				// System.out.println("_" + folder + "_");				
 
 				String basePath = SasCachePlugin.getSasCachePath() + "//" + folder + "//";
 
 				int z = tile.getZoom() + 1;
 				int x = tile.getXtile();
 				int y = tile.getYtile();
-
-				if (folder.equals("yasat"))
-				{
-					SasCacheTileCoordsConvertor conv = new SasCacheTileCoordsConvertor();
-					int[] tileCoords = conv.tile3857t3395(z, x, y);
-					x = tileCoords[0];
-					y = tileCoords[1];
-					System.out.println("convert");
-				}
 
 				int xdiv = x / 1024;
 				int ydiv = y / 1024;
@@ -49,7 +39,6 @@ public class SasCacheTileLoader extends OsmTileLoader {
 				
 				String filePath = basePath + fileName;
 
-				//byte fileContent[] = readFileToByteArray("c://Downloads//SAS.Planet.Release.121010//cache//yasat//z14//4//x4772//2//y2333.jpg");
 				byte fileContent[] = readFileToByteArray(filePath);
 				if ((int)fileContent.length > 0)
 				{

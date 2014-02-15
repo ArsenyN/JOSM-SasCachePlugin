@@ -6,6 +6,9 @@ import static org.openstreetmap.josm.tools.I18n.trc;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map.*;
+
 
 import java.awt.Component;
 
@@ -24,10 +27,10 @@ import org.openstreetmap.josm.gui.layer.Layer.LayerAction;
 
 class LayersListAction extends AbstractAction implements LayerAction {
 
-	private String[] folderList;
+	private HashMap<String, String> folderList;
 	private SasCacheLayer layer;
 
-	LayersListAction(String[] folderList, SasCacheLayer layer)
+	LayersListAction(HashMap<String, String> folderList, SasCacheLayer layer)
 	{
 		super();
 		this.folderList = folderList;
@@ -40,12 +43,15 @@ class LayersListAction extends AbstractAction implements LayerAction {
 	public Component createMenuComponent() {
 		JMenu menu = new JMenu("Cлой данных");
 
-		for(String folder : folderList)
+		for(Entry<String, String> entry : folderList.entrySet())
 		{
-			JCheckBoxMenuItem item = new JCheckBoxMenuItem(new ApplyLayersListAction(folder, this.layer));		
+			String folder = entry.getKey();
+			String name = entry.getValue();
+
+			JCheckBoxMenuItem item = new JCheckBoxMenuItem(new ApplyLayersListAction(name, folder, this.layer));		
 			if (folder == this.layer.layerFolder)	
 				item.setSelected(true);
-			menu.add(item);
+			menu.add(item);			
 		}		
 
 		return menu;
@@ -54,21 +60,26 @@ class LayersListAction extends AbstractAction implements LayerAction {
 	public boolean supportLayers(List<Layer> layers) {
 		return false;
 	}
+
 }
+	
 
 class ApplyLayersListAction extends AbstractAction
 {
 	private String layerName;
+	private String layerFolder;
+
 	private SasCacheLayer layer;
 
-	ApplyLayersListAction(String layerName, SasCacheLayer layer)
+	ApplyLayersListAction(String layerName, String layerFolder, SasCacheLayer layer)
 	{
 		super(layerName);
 		this.layerName = layerName;
+		this.layerFolder = layerFolder;
 		this.layer = layer;
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		this.layer.SetLayerFolder(this.layerName);
+		this.layer.SetLayerFolder(this.layerFolder);
 	}
 }

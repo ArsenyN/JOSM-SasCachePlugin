@@ -34,17 +34,7 @@ public class SasCacheAddLayerAction extends JosmAction
 		if (new File(cPath).exists()) 
 		{
 			Layer layer = new SasCacheLayer();        
-			Main.main.addLayer(layer);    
-
-			/*Action[] actions = layer.getMenuEntries();
-
-			for(Action a : actions) 
-			{
-			    String item = a.toString();
-				System.out.println(item);
-			}*/
+			Main.main.addLayer(layer);    			
 		}
 	}
-
-
 }
