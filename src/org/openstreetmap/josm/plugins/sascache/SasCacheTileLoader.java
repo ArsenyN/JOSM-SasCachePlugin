@@ -18,6 +18,7 @@ public class SasCacheTileLoader extends OsmTileLoader {
 	
 	public TileJob createTileLoaderJob(final Tile tile) {
 		final String folder = this.layer.layerFolder;
+		final String ext = this.layer.layerExt;
 
 		return new TileJob() {
 
@@ -35,7 +36,7 @@ public class SasCacheTileLoader extends OsmTileLoader {
 				int xdiv = x / 1024;
 				int ydiv = y / 1024;
 
-				String fileName = "z" + z + "//" + xdiv + "//x" + x + "//" + ydiv + "//y" + y + ".jpg";
+				String fileName = "z" + z + "//" + xdiv + "//x" + x + "//" + ydiv + "//y" + y + ext;
 				
 				String filePath = basePath + fileName;
 
