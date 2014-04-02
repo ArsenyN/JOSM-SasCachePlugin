@@ -17,13 +17,21 @@ public class SasCachePlugin extends Plugin{
 	public SasCachePlugin(PluginInformation info) {
 			super(info);		           
 			
-			MainMenu.add(Main.main.menu.imagerySubMenu, sasCacheAddLayerAction);
-
-			//System.out.println("1");
+			MainMenu.add(Main.main.menu.imagerySubMenu, sasCacheAddLayerAction);			
 	}	
 
 	public static String getSasCachePath()
-    {
-    	return Main.pref.get("sascache.path");
-    }
+	{
+		return Main.pref.get("sascache.path");
+	}
+
+	public static String getSasCacheLastLayer()
+	{
+		return Main.pref.get("sascache.lastlayer");
+	}
+
+	public static void setSasCacheLastLayer(String layerName)
+	{
+		Main.pref.put("sascache.lastlayer", layerName);
+	}
 }

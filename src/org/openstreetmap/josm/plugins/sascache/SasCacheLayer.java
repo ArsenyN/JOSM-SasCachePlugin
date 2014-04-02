@@ -46,12 +46,14 @@ public class SasCacheLayer extends TMSLayer
 		this.existFolders = new HashMap<String, String>();
 		
 		String firstFolder = "";
+		String lastLayer = (String)SasCachePlugin.getSasCacheLastLayer();
+
 		for(String folder : folderList)
 		{
 			if (this.layerList.containsKey(folder))
 			{
 				this.existFolders.put(folder, this.layerList.get(folder));
-				if (firstFolder == "")
+				if (firstFolder == "" || folder.equals(lastLayer))
 					firstFolder = folder;				
 			}
 		}
@@ -101,11 +103,6 @@ public class SasCacheLayer extends TMSLayer
 		return actionArr;
 	}
 
-	// public void clearTileCacheWrapper() {
-		
-	// 	//this.clearTileCache(monitor);
-	// }
-
 	public void SetLayerFolder(String layerFolder)
 	{
 		Boolean needClear = (layerFolder != this.layerFolder && this.layerFolder != "");
@@ -118,9 +115,11 @@ public class SasCacheLayer extends TMSLayer
 			this.tileCache.clear();
 			Main.map.repaint();
 		}
+		SasCachePlugin.setSasCacheLastLayer(layerFolder);
 	}
 
 	private HashMap<String, String> layerList = new HashMap<String, String>(){{
+		//put("yasat", "Яндекс Спутник");
 		put("bing_roads_en", "Bing Maps - дороги (en)");
 		put("bing_roads_ru", "Bing Maps - дороги (ru)");
 		put("vesat", "Bing Maps - спутник");
