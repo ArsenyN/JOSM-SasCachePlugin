@@ -1,0 +1,242 @@
+Bing Maps - дороги (en)
+Bing Maps - дороги (ru)
+Bing Maps - спутник
+Bing Maps - Bird's Eye Север
+Генштаб (in7ane.com)
+Генштаб 10 км
+Генштаб 1 км
+Генштаб 250 м
+Генштаб 2km
+Генштаб 500 м
+Генштаб 5 км
+Спутник (Геопортал Роскосмоса)
+Гибрид (Google)
+Ландшафт (Google)
+Карта (Google)
+Спутник (Google)
+Пробки (Google Maps)
+Panoramio KML
+Кавказский край 5-верстка. 1926г.
+Аэрофотосъемка ВОВ (sasgis.ru)
+Менде 2-верстка., Тверская (boxpis.ru)
+Санкт-Петербургская, 1-верстка., 1866, центр (boxpis.ru)
+Шуберт 2-верстка., Московская (boxpis.ru)
+Эстония (Maaamet aero)
+Карта Украины (mapia.com.ua)
+Карта Украины и Белоруссии (maps.visicom.ua)
+Карта (Карты@mail)
+osmosnimki.ru
+Транспорт OSM (osmosnimki.ru)
+OpenStreetMap Cycle Map
+MAPNIK (OpenStreetMap)
+Карта OSM (mapsurfer.net)
+OpenMapSurfer (рельеф)
+OpenMapSurfer (гибрид)
+Карта OSM (opnvkarte.de)
+Карта (Gurtam)
+Рельеф (maps-for-free)
+Карта (multimap)
+Карта Navitel
+Водные ресурсы (maps-for-free)
+Марс (Google)
+Луна (Google)
+Lunar Orbiter (NASA)
+Mars MOLA (NASA)
+Звёзды (Google)
+Wikimapia
+Карта (WikiMapia)
+Гибрид (Wikimapia)
+Гибрид (Yahoo!)
+Карта (Yahoo!)
+Спутник (Yahoo!)
+2Gis.ru
+Кировская область - недвижимость (43.geohub.net)
+Кировская область - гибрид (43.geohub.net)
+Кировская область - лесничества (43.geohub.net)
+Кировская область - ортофотоплан (43.geohub.net)
+Кировская область - план (43.geohub.net)
+Кировская область - карта (43.geohub.net)
+Гибрид (geohub.net)
+Рельеф (geohub.net)
+Карта (geohub.net)
+Cпутник (geohub.net)
+Атырау
+Карта Латвии
+Латвия топо
+Чебоксары (cheboksary.ws)
+Чебоксары-old (cheboksary.ws/2010)
+Высоты (heywhatsthat.com)
+Карта (Eniro.com)
+Аэрофото (Eniro.com)
+Витебск спутник z18 (etokarta.com)
+Карта (Геоцентр-Консалтинг)
+marine.geogarage.com/routes (geogarage.com)
+Кадастровая карта Молдавии (geoportal.md)
+Карта Молдавии (geoportal.md)
+Кемеровская область
+Административные границы (gis-gid.ru)
+Рельеф (gis-gid.ru)
+Карта городов России (gis-gid.ru)
+Татарстан карта (gisogvrt.ru)
+Татарстан снимок (gisogvrt.ru)
+Карта Gurtam (maps.cnord.ru)
+Ижевск (igis.ru)
+Карта Краснодара (in-sfera.ru)
+Карта Иркутска
+Kartaspb (zoomify)
+Магнитогорск (magnitog.ru)
+МТС Поиск (wap.mpoisk.ru)
+Карта Карелии (navici.com)
+Пробки Navitel
+Карта Молдавии (point.md)
+Новокузнецк (rugis.ru)
+Лётные карты  (runwayfinder.com)
+Карты по Сибирскому региону
+Карта (navigation.teleatlas.com)
+Карта Ви-Тел (vi-tel.ru)
+Waze live map (world.waze.com/livemap/)
+(zoomify)
+ArcGIS.Hybrid
+ArcGIS.Imagery
+ArcGIS.LightGrayCanvas
+ArcGIS.NatGeo
+ArcGIS.Streets
+ArcGIS.Terrain
+ESRI_Topo_Maps
+USA_Topo_Maps
+Москва + МО Генштаб (school2.ru)
+Генштаб (TopoMapper.com)
+ТопоКарта (Маршруты.ру)
+Geoportal-Ландсат
+Geoportal-Метеор
+Geoportal-Alos
+Ландшафт без названий (Google)
+Карта (GoogleMapMaker)
+Транспорт (Google)
+Panoramio Картинки
+Карта Кубанской области 1902г.
+10-верстка Кубани (1918 г. Стрельбицкого)
+Карта Майкопского округа 1925г.
+Карта Кубанского округа 1930г.
+5 верстовка Кавказа 1877г
+gallica.bnf.fr
+Карта Москвы 1904 (mosday.ru)
+Карта Москвы 1912 (mosday.ru)
+Карта Москвы 1964 (mosday.ru)
+Карта Москвы 1987 (retromap.ru)
+10в. Стрельбицкого 1882г.
+Немецкая Аэро-Фото съёмка (Краснодар)
+Геопортал Калужской области (giskaluga.ru)
+Азербайджан (GoMap.az)
+Карта Уфы (ufakarta.ru)
+Азербайджан (Yollar.az)
+Контуры Высот (OpenMapSurfer)
+Гибрид Navteq (mapquest.com)
+Гибрид Navteq (navteq.com)
+Карта Navteq (mapquest.com)
+Карта Navteq (navteq.com)
+Карта Navteq (nn4d.com)
+Спутник DG (navteq.com)
+Карта Nokia (Live View)
+Спутник DG (Nokia Satellite Recent)
+Спутник DG (Nokia Satellite Standard)
+Гибрид Nokia (maps.ovi.com)
+Местность Nokia (maps.ovi.com)
+Карта Nokia (maps.ovi.com)
+Спутник DG (maps.ovi.com)
+Трёхмерные здания
+Карта + знаки  OSM (cloudmade.com)
+Карта GPS-треков OSM
+Карта границ OSM (mapsurfer.net)
+Карта OSM Серая (mapsurfer.net)
+Надписи OSM (toolserver.org)
+Административное деление (ITO Map)
+Шлагбаумы, заборы (ITO Map)
+Здания и адресация (ITO Map)
+Выстоность зданий (ITO Map)
+Водные каналы (ITO Map)
+Стоянки, парковки (ITO Map)
+Электрические линии (ITO Map)
+Electricity generation (ITO Map)
+FIXME (ITO Map)
+Former railways (ITO Map)
+Golf (ITO Map)
+Green space access (ITO Map)
+Highway lanes (ITO Map)
+Highway lighting (ITO Map)
+Уровни объектов (ITO Map)
+Метро (ITO Map)
+Водная навигация (ITO Map)
+notname tag (ITO Map)
+Железные дороги (ITO Map)
+Railway electrification (ITO Map)
+Railway engineering (ITO Map)
+Railway freight (ITO Map)
+Railway stations (ITO Map)
+Railway tracks (ITO Map)
+Recent edits by type last 7 days (ITO Map)
+Recent edits by type last 90 days (ITO Map)
+Recent edits last 7 days (ITO Map)
+Recent edits last 90 days (ITO Map)
+Школы (ITO Map)
+Пешеходные дороги (ITO Map)
+Ограничения скорости (ITO Map)
+Speed limits fixme (ITO Map)
+Speed limits kmh (ITO Map)
+Speed limits kmh major roads (ITO Map)
+Speed limits major roads (ITO Map)
+Speed limits mph (ITO Map)
+Speed limits mph major roads (ITO Map)
+Дорожное покрытие (ITO Map)
+Transport construction (ITO Map)
+Unknown roads (ITO Map)
+Unrecognised speed limits (UK only) (ITO Map)
+Реки, притоки, вода (ITO Map)
+Карта (rosreestr.ru)
+Кадастровые границы (rosreestr.ru)
+undefined
+Кадастровое землепользование (rosreestr.ru)
+Звёзды (sky-map.org)
+Звёзды Chandracomp (Google)
+Слой созвездий (Google)
+Звёзды Spitzer (Google)
+Звёзды (wikisky.org)
+Марс Высоты (Google)
+Марс Инфракрасный (Google)
+Луна Высоты (Google)
+Хребтовка Джунгарии
+Ергаки - Арадан
+Архыз
+Дамхурц
+Теберда и Домбай
+Сводная
+КБ высокогорный заповедник
+Красная поляна
+Приэльбрусье
+Архыз Загедан Рица
+Теберда - Домбай
+Приэльбрусье
+Сводная
+Хребтовка Приэльбрусье (Ляпин В.Г.)
+Абишира-Ахуба (В.Ляпин)
+Хребтовка Терскей-Алатау
+Горные перевалы северного Тянь-Шаня
+Тянь-Шань + Памир
+Западный Кавказ (КОТ ОРИЕНТ)
+Карты Украины (map.meta.ua)
+Кадастровая Карта Украины
+Карта Крыма (crimea.ua)
+Гибрид Украины (gis-center.com)
+Украина (luxena.com)
+Гибрид Украины (mapservices.com.ua)
+Карта Украины (mapservices.com.ua)
+Дрогобыч и Трускавец (nadoloni.com)
+Карта Одессы (odessa.ua)
+Спутниковые снимки Украины (map.meta.ua)
+Златоуст (Umap.ru)
+Копейск (Umap.ru)
+Красноуральск (Umap.ru)
+Лобва (Umap.ru)
+Троицк (Umap.ru)
+Новоуральск (Umap.ru)
+Серов (Umap.ru)
