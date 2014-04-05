@@ -118,6 +118,12 @@ public class SasCacheLayer extends TMSLayer
 		SasCachePlugin.setSasCacheLastLayer(layerFolder);
 	}
 
+	@Override
+    public String getToolTipText() {
+        return tr("SasCache - {0}, зум = {1}", this.layerList.get(this.layerFolder), currentZoomLevel);
+    }
+
+
 	private HashMap<String, String> layerList = new HashMap<String, String>(){{
 		//put("yasat", "Яндекс Спутник");
 		put("bing_roads_en", "Bing Maps - дороги (en)");
